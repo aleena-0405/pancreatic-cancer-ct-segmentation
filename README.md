@@ -1,372 +1,194 @@
-# pancreatic-cancer-ct-segmentation
+# Pancreatic Cancer CT Segmentation Using Deep Learning
 
-**# Pancreatic Cancer CT Segmentation Using Deep Learning**
+A research project focused on **pancreatic CT image segmentation using deep learning techniques**.
 
+---
 
+## 📌 Overview
 
-**## 📌 Project Overview**
+Pancreatic cancer is a serious disease where early detection and accurate analysis can support clinical decision-making. Medical image segmentation is an important step in computer-aided analysis because it helps identify and isolate anatomical structures from medical images.
 
+This project investigates **deep learning-based segmentation of the pancreas from CT images**.
 
+The project uses the **Medical Segmentation Decathlon (MSD) Task 07 – Pancreas** dataset for experimentation and evaluation.
 
-**This project focuses on the analysis and segmentation of pancreatic regions from Computed Tomography (CT) images using deep learning techniques.**
+> **Dataset Notice:** The MSD Task 07 Pancreas dataset is **not included in this repository**. The dataset is stored locally and excluded from Git using `.gitignore`.
 
+---
 
+## 🎯 Objectives
 
-**The main objective is to develop a deep learning-based approach that can automatically identify and segment the pancreas from CT images. The project is part of a research study on computer-aided analysis of pancreatic cancer using medical images.**
+- Analyze pancreatic CT images.
+- Preprocess CT images for deep learning.
+- Develop a pancreas segmentation pipeline.
+- Experiment with suitable deep learning segmentation architectures.
+- Evaluate segmentation performance using appropriate metrics.
+- Visualize and analyze segmentation results.
+- Investigate approaches that may improve computer-aided pancreatic image analysis.
 
+---
 
+## 📊 Dataset
 
-**The project uses the \*\*Medical Segmentation Decathlon (MSD) Task 07 – Pancreas\*\* dataset for experimentation and evaluation.**
+### Medical Segmentation Decathlon — Task 07: Pancreas
 
+This project uses the **MSD Task 07 Pancreas** dataset.
 
+The dataset contains abdominal CT volumes and corresponding segmentation labels.
 
-**> \*\*Note:\*\* The dataset is not included in this GitHub repository due to its large size. It is downloaded and stored locally for research purposes.**
+### Dataset Contents
 
+The dataset includes:
 
+- CT image volumes
+- Segmentation masks
+- Training and testing data
+- Dataset metadata
 
-**---**
+### Local Dataset Structure
 
+The dataset is stored outside this GitHub repository.
 
+```text
+MSD_Task07_Pancreas/
+│
+├── imagesTr/
+├── imagesTs/
+├── labelsTr/
+└── dataset.json
+```
 
-**## 🎯 Objectives**
+The raw dataset files are excluded from version control using `.gitignore`.
 
+---
 
+## 🧠 Research Workflow
 
-**- Study pancreatic CT images and their characteristics.**
+The current research workflow is planned as follows:
 
-**- Preprocess CT images for deep learning.**
+```text
+CT Images
+    │
+    ▼
+Data Preprocessing
+    │
+    ▼
+Image / Volume Preparation
+    │
+    ▼
+Deep Learning Model
+    │
+    ▼
+Pancreas Segmentation
+    │
+    ▼
+Post-processing
+    │
+    ▼
+Evaluation
+    │
+    ▼
+Visualization & Analysis
+```
 
-**- Perform pancreas segmentation using deep learning techniques.**
+The exact model architecture and methodology will be finalized as the research progresses.
 
-**- Experiment with suitable segmentation architectures.**
+---
 
-**- Evaluate segmentation performance using appropriate metrics.**
+## 🛠️ Technologies
 
-**- Visualize and analyze segmentation results.**
+The project is being developed using:
 
-**- Investigate approaches that may contribute to improved computer-aided pancreatic cancer analysis.**
+- **Python**
+- **PyTorch**
+- **NumPy**
+- **OpenCV**
+- **NiBabel**
+- **Matplotlib**
+- **Jupyter Notebook**
 
+Additional libraries will be added as required during development.
 
+---
 
-**---**
+## 📁 Repository Structure
 
+```text
+pancreatic-cancer-ct-segmentation/
+│
+├── README.md
+├── .gitignore
+│
+├── src/
+│   ├── preprocessing/
+│   ├── segmentation/
+│   ├── evaluation/
+│   └── visualization/
+│
+├── notebooks/
+│
+├── configs/
+│
+├── results/
+│
+└── docs/
+```
 
+The repository structure will evolve as the project progresses.
 
-**## 📊 Dataset**
+---
 
+## 📈 Evaluation
 
+The segmentation models will be evaluated using appropriate medical image segmentation metrics, including:
 
-**### Medical Segmentation Decathlon — Task 07: Pancreas**
+- **Dice Similarity Coefficient (DSC)**
+- **Intersection over Union (IoU)**
+- **Precision**
+- **Recall**
+- **Hausdorff Distance**
 
+The final evaluation methodology will be determined during the research process.
 
+---
 
-**The project uses the \*\*MSD Task 07 Pancreas\*\* dataset.**
+## 🔬 Research Progress
 
+| Task | Status |
+|------|--------|
+| MSD Task 07 Pancreas dataset downloaded | ✅ Completed |
+| GitHub repository created | ✅ Completed |
+| `.gitignore` configured | ✅ Completed |
+| Dataset exploration | 🔄 In Progress |
+| Data preprocessing | ⬜ Pending |
+| Baseline segmentation model | ⬜ Pending |
+| Model training | ⬜ Pending |
+| Model evaluation | ⬜ Pending |
+| Result visualization | ⬜ Pending |
+| Model comparison | ⬜ Pending |
+| Research documentation | ⬜ Pending |
 
+---
 
-**The dataset contains abdominal CT images along with corresponding segmentation labels.**
+## ⚠️ Dataset & Privacy Notice
 
+The raw CT images and segmentation labels are **not stored in this GitHub repository**.
 
+Large medical imaging files such as `.nii` and `.nii.gz` are excluded through `.gitignore`.
 
-**### Dataset Contents**
+This repository contains the **research code, documentation, configurations, notebooks, and selected results**, rather than the raw dataset.
 
+---
 
+## 👩‍💻 Author
 
-**The dataset includes:**
+**Aleena Antony**  
+B.Tech Computer Science and Engineering
 
+---
 
+## 📌 Disclaimer
 
-**- CT images**
+This project is intended for **academic and research purposes only**.
 
-**- Segmentation masks/labels**
-
-**- Training and testing data**
-
-**- Dataset metadata**
-
-
-
-**### Dataset Location**
-
-
-
-**The dataset is stored \*\*outside this GitHub repository\*\*.**
-
-
-
-**Example local structure:**
-
-
-
-**```text**
-
-**MSD\_Task07\_Pancreas/**
-
-**├── imagesTr/**
-
-**├── imagesTs/**
-
-**├── labelsTr/**
-
-**└── dataset.json**
-
-**```**
-
-
-
-**The dataset files are excluded from Git using `.gitignore`.**
-
-
-
-**---**
-
-
-
-**## 🧠 Methodology**
-
-
-
-**The research workflow will generally consist of the following stages:**
-
-
-
-**```text**
-
-**CT Images**
-
-&#x20;    **↓**
-
-**Data Preprocessing**
-
-&#x20;    **↓**
-
-**Image/Volume Preparation**
-
-&#x20;    **↓**
-
-**Deep Learning Model**
-
-&#x20;    **↓**
-
-**Pancreas Segmentation**
-
-&#x20;    **↓**
-
-**Post-processing**
-
-&#x20;    **↓**
-
-**Evaluation**
-
-&#x20;    **↓**
-
-**Visualization \& Analysis**
-
-**```**
-
-
-
-**The exact model architecture and methodology will be finalized during the research process.**
-
-
-
-**---**
-
-
-
-**## 🛠️ Technologies**
-
-
-
-**The project is being developed using:**
-
-
-
-**- Python**
-
-**- PyTorch**
-
-**- NumPy**
-
-**- OpenCV**
-
-**- NiBabel**
-
-**- Matplotlib**
-
-**- Jupyter Notebook**
-
-
-
-**Additional libraries may be added as the research progresses.**
-
-
-
-**---**
-
-
-
-**## 📁 Project Structure**
-
-
-
-**```text**
-
-**pancreatic-cancer-ct-segmentation/**
-
-**│**
-
-**├── README.md**
-
-**├── .gitignore**
-
-**│**
-
-**├── src/**
-
-**│   ├── preprocessing/**
-
-**│   ├── segmentation/**
-
-**│   ├── evaluation/**
-
-**│   └── visualization/**
-
-**│**
-
-**├── notebooks/**
-
-**│**
-
-**├── configs/**
-
-**│**
-
-**├── results/**
-
-**│**
-
-**└── docs/**
-
-**```**
-
-
-
-**The structure will be updated as the project develops.**
-
-
-
-**---**
-
-
-
-**## 📈 Evaluation**
-
-
-
-**The segmentation models will be evaluated using suitable medical image segmentation metrics, such as:**
-
-
-
-**- Dice Similarity Coefficient (DSC)**
-
-**- Intersection over Union (IoU)**
-
-**- Precision**
-
-**- Recall**
-
-**- Hausdorff Distance**
-
-
-
-**The final evaluation metrics will depend on the selected methodology.**
-
-
-
-**---**
-
-
-
-**## 🔬 Research Status**
-
-
-
-**\*\*Current Status:\*\* Research and development**
-
-
-
-**### Completed**
-
-
-
-**- \[x] Downloaded MSD Task 07 Pancreas dataset**
-
-**- \[x] Created GitHub repository**
-
-**- \[x] Configured `.gitignore`**
-
-**- \[ ] Dataset exploration**
-
-**- \[ ] Data preprocessing**
-
-**- \[ ] Baseline segmentation model**
-
-**- \[ ] Model training**
-
-**- \[ ] Model evaluation**
-
-**- \[ ] Result visualization**
-
-**- \[ ] Model comparison**
-
-**- \[ ] Research documentation**
-
-
-
-**---**
-
-
-
-**## ⚠️ Dataset Notice**
-
-
-
-**The raw medical imaging dataset is \*\*not included in this repository\*\*.**
-
-
-
-**Large CT volumes and segmentation files are excluded using `.gitignore`.**
-
-
-
-**Users interested in reproducing the experiments should obtain the appropriate dataset from its official source and configure the local dataset path accordingly.**
-
-
-
-**---**
-
-
-
-**## 👩‍💻 Author**
-
-
-
-**\*\*Aleena Antony\*\***
-
-
-
-**B.Tech Computer Science and Engineering**
-
-
-
-**---**
-
-
-
-**## 📌 Disclaimer**
-
-
-
-**This project is intended for \*\*academic and research purposes\*\*. It is not intended to provide medical diagnosis or replace professional medical judgment.**
-
+It is not intended to provide medical diagnosis, treatment recommendations, or to replace the judgment of qualified healthcare professionals.
