@@ -1,13 +1,20 @@
+
 # ==============================
 # DATASET - DO NOT UPLOAD
 # ==============================
 
 MSD_Task07_Pancreas/
 Task07_Pancreas/
+data/
+datasets/
 
 # Medical imaging files
 *.nii
 *.nii.gz
+*.mha
+*.mhd
+*.nrrd
+*.dcm
 
 # ==============================
 # PYTHON
@@ -15,6 +22,7 @@ Task07_Pancreas/
 
 __pycache__/
 *.py[cod]
+*.pyo
 
 # Virtual environments
 venv/
@@ -36,6 +44,7 @@ env/
 *.ckpt
 *.h5
 *.keras
+*.onnx
 
 # ==============================
 # EXPERIMENT OUTPUTS
@@ -44,6 +53,15 @@ env/
 outputs/
 runs/
 checkpoints/
+wandb/
+mlruns/
+lightning_logs/
+
+# Temporary and log files
+*.log
+*.tmp
+*.temp
+*.bak
 
 # ==============================
 # IDE
@@ -58,3 +76,4 @@ checkpoints/
 
 .DS_Store
 Thumbs.db
+desktop.ini
