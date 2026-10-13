@@ -1,4 +1,5 @@
-
+import numpy as np
+import matplotlib.pyplot as plt
 import torch
 from monai.transforms import (
     LoadImaged,
@@ -64,3 +65,40 @@ print("Normalized CT maximum:", ct.max().item())
 print("Mask labels:", torch.unique(mask).tolist())
 
 print("Normalization test completed.")
+
+
+
+# Convert the preprocessed CT and mask to NumPy arrays
+ct_array = data["image"][0].cpu().numpy()
+mask_array = data["label"][0].cpu().numpy()
+
+# Find slices containing pancreatic mass (label 2)
+mass_slices = np.where(
+    np.any(mask_array == 2, axis=(0, 1))
+)[0]
+
+
+# Find slices containing pancreatic mass (label 2)
+mass_slices = np.where(
+    np.any(mask_array == 2, axis=(0, 1))
+)[0]
+
+if len(mass_slices) > 0:
+    slice_index = mass_slices[len(mass_slices) // 2]
+
+    plt.figure(figsize=(8, 8))
+    plt.imshow(ct_array[:, :, slice_index], cmap="gray")
+    plt.imshow(
+        np.ma.masked_where(
+            mask_array[:, :, slice_index] != 2,
+            mask_array[:, :, slice_index],
+        ),
+        cmap="autumn",
+        alpha=0.6,
+    )
+    plt.title(f"Preprocessed CT and Mass Mask - Slice {slice_index}")
+    plt.axis("off")
+    plt.tight_layout()
+    plt.show()
+else:
+    print("No pancreatic mass label found.")
